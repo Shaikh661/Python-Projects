@@ -2,25 +2,42 @@
 import myModule as myM
 # ... This area is to Define Functions.
 random = myM.random
-
+my_Pass = myM.my_pass
+start = myM.start
+exit = myM.exit
 # ... This area is to Code.
-myM.start()
+start()
 
 print('|==> Geuss The Number <==|')
 
-# range_of_number_A = int(input('Enter your range of A number : '))
-# range_of_number_B = int(input('Enter your range of B number : '))
-
-range_of_number_A = int(1)
-range_of_number_B = int(10)
-
-print(f'Your range is {range_of_number_A} : {range_of_number_B}.')
-
-random_number = random.randrange(range_of_number_A,range_of_number_B)
-
-# print(f'your random number between ({range_of_number_A}:{range_of_number_B}) is ({random_number})')
+range_of_game = int(input('Enter your range of game : '))
 
 
 
+print(f'Your set your range {range_of_game}.\n')
 
-myM.exit()
+random_number = random.randrange(1,2)
+
+
+
+# random_number = random.randrange(1,2)
+
+user_points = 0
+
+for i in range(1,range_of_game + 1):
+  print(f'\n--{i}--')
+  user_number = int(input('Enter your number : '))
+  #
+  #
+  if (random_number == user_number):
+    user_points = user_points + 1
+  #
+  print(f'{user_number} : {random_number}')
+
+
+
+
+
+
+print(f'\n\n{user_points}')
+exit()
